@@ -29,6 +29,24 @@ fn AttachButton() -> Element {
         }
     }
 }
+#[component]
+fn SpeechToTextButton() -> Element {
+    rsx! {
+        div {
+            class: "h-8 w-8 p-2 bg-secondary rounded-full",
+            button {
+                id: "speech-to-text-button",
+                class: "svg-icon",
+                img {
+                    class: "svg-icon",
+                    width: "48",
+                    height: "48",
+                    src: speech_to_text_svg.name
+                }
+            }
+        }
+    }
+}
 
 #[component]
 fn SendMessageButton(lock_console: bool) -> Element {
