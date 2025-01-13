@@ -4,6 +4,7 @@ use std::env;
 pub struct Config {
     pub app_database_url: String,
     pub unstructured_endpoint: String,
+    pub customer_key: Option<String>,
 }
 
 impl Config {
@@ -19,6 +20,7 @@ impl Config {
         Config {
             app_database_url,
             unstructured_endpoint,
+            customer_key: env::var("CUSTOMER_KEY").ok(),
         }
     }
 }
